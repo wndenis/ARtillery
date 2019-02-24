@@ -14,17 +14,24 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 10f);
+        Init();
+    }
+
+    protected virtual void Init()
+    {
+        
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         transform.position += direction.normalized * speed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected void OnTriggerEnter(Collider other)
     {
-        Instantiate(deathParticles, transform.parent).transform.position = transform.position;
+        if (deathParticles)
+            Instantiate(deathParticles, transform.parent).transform.position = transform.position;
         var explosion = Physics.OverlapSphere(transform.position, 0.04f);
         foreach (var elem in explosion)
         {
@@ -33,11 +40,17 @@ public class Bullet : MonoBehaviour
             {
                 var enemy = elem.GetComponent<Enemy>();
                 if (enemy)
-                    enemy.Kill();
+                    enemy.Damage();
             }
             else if (elem.CompareTag("Bullet"))
             {
                 Destroy(elem.gameObject);
+            }
+            else if (elem.CompareTag("MainCamera"))
+            {
+                var player = elem.GetComponent<Player>();
+                if (player)
+                    player.Damage();
             }
         }
         Destroy(gameObject);

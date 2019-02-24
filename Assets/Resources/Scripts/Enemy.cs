@@ -5,7 +5,9 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public Transform gun;
+    public float hp = 1;
+    [SerializeField]
+    private Transform gun;
     public Transform gunTip;
     public GameObject gunParticles;
     public float attackInterval = 2f;
@@ -15,13 +17,13 @@ public class Enemy : MonoBehaviour
 
     public GameObject deathParticles;
         
-    [HideInInspector]
+    //[HideInInspector]
     public Transform player;
     
-    private NavMeshAgent _navMeshAgent;
+    protected NavMeshAgent _navMeshAgent;
     
     // Start is called before the first frame update
-    private void Start()
+    protected void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
         StartCoroutine(Brain());
@@ -32,14 +34,21 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void Kill()
+    public void Damage(float amount = 1f)
+    {
+        hp -= amount;
+        if (hp <= 0)
+            Die();
+    }
+
+    protected void Die()
     {
         Instantiate(deathParticles, transform.parent).transform.position = transform.position;
         Destroy(gameObject, 0.1f);
     }
 
     // Update is called once per frame
-    private IEnumerator Brain()
+    protected virtual IEnumerator Brain()
     {
         yield return new WaitForSeconds(0.1f);
         _navMeshAgent.enabled = true;

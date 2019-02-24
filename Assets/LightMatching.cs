@@ -81,14 +81,14 @@ public class LightMatching : MonoBehaviour
         
         if (CameraDevice.Instance.SetFrameFormat(mPixelFormat, true))
         {
-            Debug.Log("Successfully registered pixel format " + mPixelFormat.ToString());
+//            Debug.Log("Successfully registered pixel format " + mPixelFormat.ToString());
             mFormatRegistered = true;
         }
         else
         {
-            Debug.LogError("Failed to register pixel format " + mPixelFormat.ToString() +
-                "\n the format may be unsupported by your device;" +
-                "\n consider using a different pixel format.");
+//            Debug.LogError("Failed to register pixel format " + mPixelFormat.ToString() +
+//                "\n the format may be unsupported by your device;" +
+//                "\n consider using a different pixel format.");
             mFormatRegistered = false;
         }
     }
@@ -99,12 +99,12 @@ public class LightMatching : MonoBehaviour
     {
         if (paused)
         {
-            Debug.Log("App was paused");
+//            Debug.Log("App was paused");
             UnregisterFormat();
         }
         else
         {
-            Debug.Log("App was resumed");
+//            Debug.Log("App was resumed");
             RegisterFormat();
         }
     }
@@ -124,11 +124,11 @@ public class LightMatching : MonoBehaviour
         imageInfo += " size: " + image.Width + " x " + image.Height + "\n";
         imageInfo += " bufferSize: " + image.BufferWidth + " x " + image.BufferHeight + "\n";
         imageInfo += " stride: " + image.Stride;
-        Debug.Log(imageInfo);
+//        Debug.Log(imageInfo);
         byte[] pixels = image.Pixels;
         if (pixels != null && pixels.Length > 0)
         {
-            Debug.Log("Image pixels: " + pixels[0] + "," + pixels[1] + "," + pixels[2] + ",...");
+//            Debug.Log("Image pixels: " + pixels[0] + "," + pixels[1] + "," + pixels[2] + ",...");
             // I have no idea what the double type is or does. seems to be similar to float
             double totalLuminance = 0.0;
             for (int p = 0; p < pixels.Length; p += 4)
@@ -142,11 +142,11 @@ public class LightMatching : MonoBehaviour
             ligtColorNum = (float)totalLuminance * 0.0255f;
             //ligtColorNum is put in for RGB. will change color along the gray scale
             lightColor = new Color(ligtColorNum, ligtColorNum, ligtColorNum, 1.0f);
-            Debug.Log("color ++++++++++++++++++++++++++++++++++++++++++++++++++++" + ligtColorNum);
+//            Debug.Log("color ++++++++++++++++++++++++++++++++++++++++++++++++++++" + ligtColorNum);
             // I got this math from someone else's code. seems to convert totalLuminance to smaller number for adjusting light luminance.
             totalLuminance /= 255.0;
             totalLuminance *= intesityModifier;
-            Debug.Log("Total luminance ========================" + totalLuminance);
+//            Debug.Log("Total luminance ========================" + totalLuminance);
             m_LightToEffect.intensity = (float)totalLuminance;
             //originally tried to change color of light in scene but it looked flickery. Could be fun though for someone to try light color effects
             //  m_LightToEffect.color = lightColor;
@@ -157,11 +157,11 @@ public class LightMatching : MonoBehaviour
             RenderSettings.ambientIntensity = m_LightToEffect.intensity;
             //I'm changing the color of the ambient light on the grayscale. It's a little redundant but I think it helps. Experiment and see how you feel. 
             RenderSettings.ambientLight = lightColor;
-            Debug.Log("light intensity = " + m_LightToEffect.intensity);
+//            Debug.Log("light intensity = " + m_LightToEffect.intensity);
             //I'm not exacly sure what the color temp does. It was a setting in someone else's code, but seems to be working out.
             colorTemperature = (float?)(totalLuminance * temperatureModifier);
             m_LightToEffect.colorTemperature = (float)colorTemperature;
-            Debug.Log("calculating color temperature =========================" + colorTemperature);
+//            Debug.Log("calculating color temperature =========================" + colorTemperature);
         }
     }
  
@@ -170,7 +170,7 @@ public class LightMatching : MonoBehaviour
     /// </summary>
     private void UnregisterFormat()
     {
-        Debug.Log("Unregistering camera pixel format " + mPixelFormat.ToString());
+//        Debug.Log("Unregistering camera pixel format " + mPixelFormat.ToString());
         CameraDevice.Instance.SetFrameFormat(mPixelFormat, false);
         mFormatRegistered = false;
     }
@@ -181,12 +181,12 @@ public class LightMatching : MonoBehaviour
     {
         if (CameraDevice.Instance.SetFrameFormat(mPixelFormat, true))
         {
-            Debug.Log("Successfully registered camera pixel format " + mPixelFormat.ToString());
+//            Debug.Log("Successfully registered camera pixel format " + mPixelFormat.ToString());
             mFormatRegistered = true;
         }
         else
         {
-            Debug.LogError("Failed to register camera pixel format " + mPixelFormat.ToString());
+//            Debug.LogError("Failed to register camera pixel format " + mPixelFormat.ToString());
             mFormatRegistered = false;
         }
     }

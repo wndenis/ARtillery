@@ -15,6 +15,7 @@
           </e>
           <e p="Scripts" t="Include">
             <e p="Bullet.cs" t="Include" />
+            <e p="BulletUFO.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
             <e p="EnemyUFO.cs" t="Include" />
