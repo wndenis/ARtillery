@@ -12,6 +12,9 @@
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
+            
+            #include "Lighting.cginc"
+            
             #pragma multi_compile_fwdadd_fullshadows
             #include "AutoLight.cginc" 
             sampler2D _MainTex; 
@@ -27,7 +30,7 @@
             } 
             fixed4 frag(v2f i) : COLOR {
                 float attenuation = LIGHT_ATTENUATION(i);
-                return tex2D(_MainTex, i.uv) * attenuation; 
+                return tex2D(_MainTex, i.uv) * _LightColor0 * attenuation; 
             }
          ENDCG 
          } 

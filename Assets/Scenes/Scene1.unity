@@ -499,9 +499,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.039397594, g: 0.7735849, b: 0.018244924, a: 1}
-  m_Intensity: 1
+  m_Intensity: 8
   m_Range: 0.1
-  m_SpotAngle: 48.5
+  m_SpotAngle: 75.432045
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -521,7 +521,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -639,6 +639,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1285737043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1285737044}
+  m_Layer: 0
+  m_Name: AnimatedBody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1285737044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285737043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4857661080457255724}
+  m_Father: {fileID: 4857661081765084173}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343830816
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +689,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1343830817
 Transform:
   m_ObjectHideFlags: 0
@@ -5989,7 +6020,7 @@ Transform:
   - {fileID: 355029986}
   - {fileID: 989689645}
   - {fileID: 2095975875}
-  m_Father: {fileID: 4857661081765084173}
+  m_Father: {fileID: 1285737044}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4857661080457255725
@@ -6112,7 +6143,7 @@ Transform:
   m_LocalPosition: {x: -0.009490967, y: 0.010681152, z: -4.4937134}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
-  - {fileID: 4857661080457255724}
+  - {fileID: 1285737044}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
