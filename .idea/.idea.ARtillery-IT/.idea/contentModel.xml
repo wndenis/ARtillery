@@ -10,7 +10,7 @@
         <e p="LightMatching.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Materials" t="Include">
-            <e p="LightCaster.shader" t="Include" />
+            <e p="LightReceive.shader" t="Include" />
             <e p="UnlitShadowReceive.shader" t="Include" />
           </e>
           <e p="Scripts" t="Include">

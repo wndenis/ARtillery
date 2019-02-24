@@ -1,4 +1,4 @@
-﻿Shader "Custom/LightCaster" 
+﻿Shader "InvisibleCasters/LightReceive" 
 {
     Properties {
         _MainTex("Base (RGB)", 2D) = "white" {}

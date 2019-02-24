@@ -104,31 +104,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Resources/Materials/UnlitShadowReceive.shader">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+            <state>
+              <caret column="33" selection-start-column="33" selection-end-column="33" />
               <folding>
-                <marker date="1550981311005" expanded="true" signature="125:1264" ph="{...}" />
-                <marker date="1550981311005" expanded="true" signature="266:1222" ph="{...}" />
-                <marker date="1550981311005" expanded="true" signature="280:352" ph="{...}" />
-                <marker date="1550981311005" expanded="true" signature="366:1219" ph="{...}" />
-                <marker date="1550981311005" expanded="true" signature="458:1204" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Resources/Materials/LightCaster.shader">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-              <folding>
-                <marker date="1550981079548" expanded="true" signature="29:1269" ph="{...}" />
-                <marker date="1550981079548" expanded="true" signature="46:101" ph="{...}" />
-                <marker date="1550981079548" expanded="true" signature="116:1238" ph="{...}" />
-                <marker date="1550981079548" expanded="true" signature="131:1235" ph="{...}" />
-                <marker date="1550981079548" expanded="true" signature="164:222" ph="{...}" />
-                <marker date="1550981079548" expanded="true" signature="242:1218" ph="{...}" />
+                <marker date="1550981518807" expanded="true" signature="35:1174" ph="{...}" />
+                <marker date="1550981518807" expanded="true" signature="176:1132" ph="{...}" />
+                <marker date="1550981518807" expanded="true" signature="190:262" ph="{...}" />
+                <marker date="1550981518807" expanded="true" signature="276:1129" ph="{...}" />
+                <marker date="1550981518807" expanded="true" signature="368:1114" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -195,7 +178,6 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Materials/UnlitShadowReceive.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Vuforia/Shaders/BrightTexture.shader" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Materials/LightCaster.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LightMatching.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultModelRecoEventHandler.cs" root0="FORCE_HIGHLIGHTING" />
@@ -208,8 +190,8 @@
         <option value="$PROJECT_DIR$/Assets/ARLightToolPack/Scripts/RenderTextureToBlend.cs" />
         <option value="$PROJECT_DIR$/Assets/LightMatching.cs" />
         <option value="$PROJECT_DIR$/Assets/Resources/Scripts/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Resources/Materials/LightCaster.shader" />
         <option value="$PROJECT_DIR$/Assets/Resources/Materials/UnlitShadowReceive.shader" />
+        <option value="$PROJECT_DIR$/Assets/Resources/Materials/LightCaster.shader" />
       </list>
     </option>
   </component>
@@ -281,12 +263,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550965503349</updated>
       <workItem from="1550965507800" duration="204000" />
-      <workItem from="1550970371780" duration="8639000" />
+      <workItem from="1550970371780" duration="8881000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8843000" />
+    <option name="totallyTimeSpent" value="9085000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -520,29 +502,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/Materials/LightCaster.shader">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <marker date="1550981079548" expanded="true" signature="29:1269" ph="{...}" />
-            <marker date="1550981079548" expanded="true" signature="46:101" ph="{...}" />
-            <marker date="1550981079548" expanded="true" signature="116:1238" ph="{...}" />
-            <marker date="1550981079548" expanded="true" signature="131:1235" ph="{...}" />
-            <marker date="1550981079548" expanded="true" signature="164:222" ph="{...}" />
-            <marker date="1550981079548" expanded="true" signature="242:1218" ph="{...}" />
-          </folding>
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Resources/Materials/UnlitShadowReceive.shader">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
           <folding>
-            <marker date="1550981311005" expanded="true" signature="125:1264" ph="{...}" />
-            <marker date="1550981311005" expanded="true" signature="266:1222" ph="{...}" />
-            <marker date="1550981311005" expanded="true" signature="280:352" ph="{...}" />
-            <marker date="1550981311005" expanded="true" signature="366:1219" ph="{...}" />
-            <marker date="1550981311005" expanded="true" signature="458:1204" ph="{...}" />
+            <marker date="1550981518807" expanded="true" signature="35:1174" ph="{...}" />
+            <marker date="1550981518807" expanded="true" signature="176:1132" ph="{...}" />
+            <marker date="1550981518807" expanded="true" signature="190:262" ph="{...}" />
+            <marker date="1550981518807" expanded="true" signature="276:1129" ph="{...}" />
+            <marker date="1550981518807" expanded="true" signature="368:1114" ph="{...}" />
           </folding>
         </state>
       </provider>
