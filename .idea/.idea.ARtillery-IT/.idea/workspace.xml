@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b4a6b598-7b56-49f7-b329-32311acfcf53" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1419584001">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.200" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultModelRecoEventHandler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <marker date="1550963593747" expanded="true" signature="0:380" ph="/* ============================================================================== ... */" />
+                <marker date="1550963593747" expanded="false" signature="388:434" ph="..." />
+                <marker date="1550963593747" expanded="true" signature="436:611" ph="/// A default implementation of Model Reco Event Handler. ... " />
+                <marker date="1550963593747" expanded="true" signature="694:12393" ph="{...}" />
+                <marker date="1550963593747" expanded="false" signature="701:902" ph="PRIVATE_MEMBER_VARIABLES" />
+                <marker date="1550963593747" expanded="false" signature="909:1193" ph="PROTECTED_MEMBER_VARIABLES" />
+                <marker date="1550963593747" expanded="false" signature="1200:2955" ph="PUBLIC_VARIABLES" />
+                <marker date="1550963593747" expanded="true" signature="1230:1332" ph="/// The Model Target used as template when a Model is recognized. ... " />
+                <marker date="1550963593747" expanded="true" signature="1470:1620" ph="/// Whether the model should be augmented with a bounding box. ... " />
+                <marker date="1550963593747" expanded="true" signature="1735:1842" ph="/// Can be set in the Unity inspector to display error messages in UI. ... " />
+                <marker date="1550963593747" expanded="true" signature="1960:2235" ph="/// Can be set in the Unity inspector to tell Vuforia whether it should: ... " />
+                <marker date="1550963593747" expanded="true" signature="2397:2699" ph="/// Can be set in the Unity inspector to tell Vuforia whether it should: ... " />
+                <marker date="1550963593747" expanded="false" signature="2963:4962" ph="UNITY_MONOBEHAVIOUR_METHODS" />
+                <marker date="1550963593747" expanded="true" signature="3004:3090" ph="/// register for events at the ModelRecoBehaviour ... " />
+                <marker date="1550963593747" expanded="true" signature="3107:3466" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="3281:3360" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="3485:4708" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="3640:3792" ph="/* Check periodically if model target is tracked and in view ... */" />
+                <marker date="1550963593747" expanded="true" signature="3950:4702" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="4051:4366" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="4129:4352" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="4383:4692" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="4462:4678" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="4743:4915" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="4790:4872" ph="{...}" />
+                <marker date="1550963593747" expanded="false" signature="4970:8470" ph="IModelRecoEventHandler_IMPLEMENTATION" />
+                <marker date="1550963593747" expanded="true" signature="5021:5120" ph="/// called when TargetFinder has been initialized successfully ... " />
+                <marker date="1550963593747" expanded="true" signature="5177:5322" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="5328:5400" ph="/// visualize initialization errors ... " />
+                <marker date="1550963593747" expanded="true" signature="5462:5672" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="5678:5742" ph="/// visualize update errors ... " />
+                <marker date="1550963593747" expanded="true" signature="5810:5954" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="5960:6045" ph="/// when we start scanning, clear all trackables ... " />
+                <marker date="1550963593747" expanded="true" signature="6092:6411" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="6250:6405" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="6417:6529" ph="/// Handles new search results. ... " />
+                <marker date="1550963593747" expanded="true" signature="6617:8413" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="6995:7119" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="7157:7293" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="7327:7431" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="7644:8407" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="7708:7820" ph="/* If the model target was created from a template, ... */" />
+                <marker date="1550963593747" expanded="true" signature="7874:8222" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="8265:8397" ph="{...}" />
+                <marker date="1550963593747" expanded="false" signature="8478:11539" ph="PRIVATE_METHODS" />
+                <marker date="1550963593747" expanded="true" signature="8608:9251" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="9053:9223" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="9111:9213" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="9346:9710" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="9762:9850" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="9928:10862" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="10935:11507" ph="{...}" />
+                <marker date="1550963593747" expanded="false" signature="11546:12391" ph="PUBLIC_METHODS" />
+                <marker date="1550963593747" expanded="true" signature="11611:11653" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="11711:12356" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="11834:12256" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="11918:12101" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="12118:12210" ph="{...}" />
+                <marker date="1550963593747" expanded="true" signature="12269:12350" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultModelRecoEventHandler.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+      </pane>
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+      <pane id="FileSystemExplorer" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b4a6b598-7b56-49f7-b329-32311acfcf53" name="Default Changelist" comment="" />
+      <created>1550965503349</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550965503349</updated>
+      <workItem from="1550965507800" duration="204000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="204000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="NuGet" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Errors In Solution" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Unit Tests Coverage" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Vuforia/Scripts/DefaultModelRecoEventHandler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <marker date="1550963593747" expanded="true" signature="0:380" ph="/* ============================================================================== ... */" />
+            <marker date="1550963593747" expanded="false" signature="388:434" ph="..." />
+            <marker date="1550963593747" expanded="true" signature="436:611" ph="/// A default implementation of Model Reco Event Handler. ... " />
+            <marker date="1550963593747" expanded="true" signature="694:12393" ph="{...}" />
+            <marker date="1550963593747" expanded="false" signature="701:902" ph="PRIVATE_MEMBER_VARIABLES" />
+            <marker date="1550963593747" expanded="false" signature="909:1193" ph="PROTECTED_MEMBER_VARIABLES" />
+            <marker date="1550963593747" expanded="false" signature="1200:2955" ph="PUBLIC_VARIABLES" />
+            <marker date="1550963593747" expanded="true" signature="1230:1332" ph="/// The Model Target used as template when a Model is recognized. ... " />
+            <marker date="1550963593747" expanded="true" signature="1470:1620" ph="/// Whether the model should be augmented with a bounding box. ... " />
+            <marker date="1550963593747" expanded="true" signature="1735:1842" ph="/// Can be set in the Unity inspector to display error messages in UI. ... " />
+            <marker date="1550963593747" expanded="true" signature="1960:2235" ph="/// Can be set in the Unity inspector to tell Vuforia whether it should: ... " />
+            <marker date="1550963593747" expanded="true" signature="2397:2699" ph="/// Can be set in the Unity inspector to tell Vuforia whether it should: ... " />
+            <marker date="1550963593747" expanded="false" signature="2963:4962" ph="UNITY_MONOBEHAVIOUR_METHODS" />
+            <marker date="1550963593747" expanded="true" signature="3004:3090" ph="/// register for events at the ModelRecoBehaviour ... " />
+            <marker date="1550963593747" expanded="true" signature="3107:3466" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="3281:3360" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="3485:4708" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="3640:3792" ph="/* Check periodically if model target is tracked and in view ... */" />
+            <marker date="1550963593747" expanded="true" signature="3950:4702" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="4051:4366" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="4129:4352" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="4383:4692" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="4462:4678" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="4743:4915" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="4790:4872" ph="{...}" />
+            <marker date="1550963593747" expanded="false" signature="4970:8470" ph="IModelRecoEventHandler_IMPLEMENTATION" />
+            <marker date="1550963593747" expanded="true" signature="5021:5120" ph="/// called when TargetFinder has been initialized successfully ... " />
+            <marker date="1550963593747" expanded="true" signature="5177:5322" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="5328:5400" ph="/// visualize initialization errors ... " />
+            <marker date="1550963593747" expanded="true" signature="5462:5672" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="5678:5742" ph="/// visualize update errors ... " />
+            <marker date="1550963593747" expanded="true" signature="5810:5954" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="5960:6045" ph="/// when we start scanning, clear all trackables ... " />
+            <marker date="1550963593747" expanded="true" signature="6092:6411" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="6250:6405" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="6417:6529" ph="/// Handles new search results. ... " />
+            <marker date="1550963593747" expanded="true" signature="6617:8413" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="6995:7119" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="7157:7293" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="7327:7431" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="7644:8407" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="7708:7820" ph="/* If the model target was created from a template, ... */" />
+            <marker date="1550963593747" expanded="true" signature="7874:8222" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="8265:8397" ph="{...}" />
+            <marker date="1550963593747" expanded="false" signature="8478:11539" ph="PRIVATE_METHODS" />
+            <marker date="1550963593747" expanded="true" signature="8608:9251" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="9053:9223" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="9111:9213" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="9346:9710" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="9762:9850" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="9928:10862" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="10935:11507" ph="{...}" />
+            <marker date="1550963593747" expanded="false" signature="11546:12391" ph="PUBLIC_METHODS" />
+            <marker date="1550963593747" expanded="true" signature="11611:11653" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="11711:12356" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="11834:12256" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="11918:12101" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="12118:12210" ph="{...}" />
+            <marker date="1550963593747" expanded="true" signature="12269:12350" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
