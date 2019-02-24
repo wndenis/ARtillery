@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\winda\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\winda\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_ARtillery-IT.92979203.00" t="ExcludeRecursive" />
-    <e p="D:\UnityProjects\ARtillery-IT" t="IncludeRecursive">
+    <e p="C:\Users\Denis Pozdnyakov\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Denis Pozdnyakov\.Rider2018.3\system\resharper-host\Local\Transient\ReSharperHost\v183\SolutionCaches\_ARtillery-IT.478002068.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\ARtillery-IT" t="IncludeRecursive">
       <e p="ARtillery-IT.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="EnemyUFO.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Materials" t="Include">
             <e p="UnlitShadowReceive.shader" t="Include" />
