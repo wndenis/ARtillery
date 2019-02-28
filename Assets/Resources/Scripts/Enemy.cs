@@ -6,8 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float hp = 1;
-    [SerializeField]
-    private Transform gun;
+    public Transform gun;
     public Transform gunTip;
     public GameObject gunParticles;
     public float attackInterval = 2f;
@@ -43,8 +42,14 @@ public class Enemy : MonoBehaviour
 
     protected void Die()
     {
+        PrepareToDie();
         Instantiate(deathParticles, transform.parent).transform.position = transform.position;
         Destroy(gameObject, 0.1f);
+    }
+
+    protected virtual void PrepareToDie()
+    {
+        
     }
 
     // Update is called once per frame

@@ -7,10 +7,13 @@ public class EnemySpawner : MonoBehaviour
 {
     public Enemy enemy;
     public EnemyUFO enemyUFO;
+    public Enemy striker;
     public Transform spawnParticles;
-    public float interval = 7f;
+    public float interval = 6f;
     public int ufoCount = 15;
+    public int strikerCount = 5;
     private int ufoCounter;
+    private int strikerCounter;
     public Transform player;
 
     // Start is called before the first frame update
@@ -36,6 +39,11 @@ public class EnemySpawner : MonoBehaviour
                 ufoCounter = 0;
                 enemyInstance = Instantiate(enemyUFO, transform.parent);
             }
+            else if (strikerCounter++ >= strikerCount)
+            {
+                strikerCounter = 0;
+                enemyInstance = Instantiate(striker, transform.parent);
+            }
             else
             {
                 enemyInstance = Instantiate(enemy, transform.parent);
@@ -47,7 +55,7 @@ public class EnemySpawner : MonoBehaviour
             
             yield return new WaitForSeconds(interval);
             
-            if (interval < 0.65f) continue;
+            if (interval < 0.8f) continue;
             if (Random.Range(0, 1) < 0.15f)
                 interval -= 0.1f;
             interval -= 0.05f;
