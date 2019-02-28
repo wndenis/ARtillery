@@ -4960,6 +4960,8 @@ MonoBehaviour:
   chargeParticles: {fileID: 7019007902636214316, guid: df0fcb9659001344fb2db3aa77168ff7,
     type: 3}
   chargeDuration: 3
+  minion: {fileID: 4857661081133962811, guid: 55adefaae474a634c88241f7c5c49dcb, type: 3}
+  minionCount: 3
 --- !u!1001 &2883688872267571646
 PrefabInstance:
   m_ObjectHideFlags: 0

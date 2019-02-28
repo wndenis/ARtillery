@@ -9,11 +9,24 @@ public class EnemyUFO : Enemy
     [Space]
     public Transform chargeParticles;
     public float chargeDuration;
+    public Enemy minion;
+    public int minionCount = 3;
 
     private void Update()
     {
-        transform.Rotate(transform.up, 18 * Time.deltaTime);
+        transform.Rotate(transform.up, 22 * Time.deltaTime);
     }
+
+    protected override void PrepareToDie()
+    {
+        for (var i = 0; i < minionCount; i++)
+        {
+            var enemyInstance = Instantiate(minion, transform.parent);
+            enemyInstance.player = player;
+            enemyInstance.transform.position = transform.position + Random.insideUnitSphere * 0.09f;
+        }
+    }
+
     protected override IEnumerator Brain()
     {
         yield return new WaitForSeconds(0.1f);
