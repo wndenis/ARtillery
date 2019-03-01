@@ -27,17 +27,10 @@
         <e p="Restart.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="ParticleSystems" t="Include">
-            <e p="ExplosionPhysicsForce.cs" t="Include" />
-            <e p="ParticleSystemMultiplier.cs" t="Include" />
             <e p="ParticleSystemsGuidelines.txt" t="Include" />
             <e p="Scripts" t="Include">
-              <e p="AfterburnerPhysicsForce.cs" t="Include" />
-              <e p="ExplosionFireAndDebris.cs" t="Include" />
-              <e p="ExtinguishableParticleSystem.cs" t="Include" />
-              <e p="FireLight.cs" t="Include" />
-              <e p="Hose.cs" t="Include" />
-              <e p="SmokeParticles.cs" t="Include" />
-              <e p="WaterHoseParticles.cs" t="Include" />
+              <e p="ExplosionPhysicsForce.cs" t="Include" />
+              <e p="ParticleSystemMultiplier.cs" t="Include" />
             </e>
           </e>
           <e p="Vehicles" t="Include">

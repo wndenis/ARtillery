@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         var ray = Camera.main.ScreenPointToRay(screenPoint);
         var from = Camera.main.ScreenToWorldPoint(screenPoint);
         var b = Instantiate(bullet, gameroot);
-        b.speed = 0.5f;
+        b.speed = 0.525f;
         b.direction = ray.direction;
         b.transform.position = from + ray.direction * 0.075f;
     }
