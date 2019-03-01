@@ -19,6 +19,7 @@ public class EnemyUFO : Enemy
 
     protected override void PrepareToDie()
     {
+        scoreCost = 10;
         for (var i = 0; i < minionCount; i++)
         {
             var enemyInstance = Instantiate(minion, transform.parent);

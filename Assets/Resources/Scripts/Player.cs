@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     public Image overlayImage;
     public Texture2D hitTexture;
     public Text hpText;
+    public Text scoreText;
+    public int score;
     
     private float hitEffectDuration = 0.2f;
     private float hitEffectStartTime = -0.2f;
@@ -31,6 +33,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         hpText.text = $"{hp}/{maxHp}";
+        scoreText.text = $"{score}";
         var screenPoint = Vector2.zero;
         var invalidTouch = true;
         
@@ -81,21 +84,26 @@ public class Player : MonoBehaviour
     private IEnumerator Fade(float fromAlpha, float toAlpha, float duration)
     {
         var imageColor = overlayImage.color;
-        var textColor = hpText.color;
+        var hpTextColor = hpText.color;
+        var scoreTextColor = scoreText.color;
 
         for (var t = 0f; t < duration; t += Time.deltaTime)
         {
             var alpha = Mathf.Lerp(fromAlpha, toAlpha, t / duration);
             imageColor.a = alpha;
-            textColor.a = 1 - alpha;
+            hpTextColor.a = 1 - alpha;
+            scoreTextColor.a = 1 - alpha;
             overlayImage.color = imageColor;
-            hpText.color = textColor;
+            hpText.color = hpTextColor;
+            scoreText.color = scoreTextColor;
             yield return null;
         }
         imageColor.a = toAlpha;
-        textColor.a = 1 - toAlpha;
+        hpTextColor.a = 1 - toAlpha;
+        scoreTextColor.a = 1 - toAlpha;
         overlayImage.color = imageColor;
-        hpText.color = textColor;
+        hpText.color = hpTextColor;
+        scoreText.color = scoreTextColor;
     }
     
 

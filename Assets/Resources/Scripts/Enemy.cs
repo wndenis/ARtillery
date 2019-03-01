@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float hp = 1;
+    public float maxHp;
     public Transform gun;
     public Transform gunTip;
     public GameObject gunParticles;
@@ -20,11 +21,13 @@ public class Enemy : MonoBehaviour
     public Transform player;
     
     protected NavMeshAgent _navMeshAgent;
+    protected int scoreCost = 1;
     
     // Start is called before the first frame update
     protected void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        maxHp = hp;
         StartCoroutine(Brain());
     }
 
@@ -35,14 +38,18 @@ public class Enemy : MonoBehaviour
 
     public void Damage(float amount = 1f)
     {
-        hp -= amount;
-        if (hp <= 0)
-            Die();
+        if (hp > 0)
+        {
+            hp -= amount;
+            if (hp <= 0)
+                Die();
+        }
     }
 
     protected void Die()
     {
         PrepareToDie();
+        player.GetComponent<Player>().score += scoreCost;
         Instantiate(deathParticles, transform.parent).transform.position = transform.position;
         Destroy(gameObject, 0.1f);
     }

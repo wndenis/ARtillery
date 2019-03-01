@@ -15,6 +15,11 @@ public class Striker : Enemy
             gun.rotation = Quaternion.Lerp(gun.rotation, rot, 0.055f);
         }
     }
+    
+    protected override void PrepareToDie()
+    {
+        scoreCost = 3;
+    }
 
     private IEnumerator LogicCycle()
     {
