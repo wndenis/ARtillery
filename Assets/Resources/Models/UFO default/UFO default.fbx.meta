@@ -19,7 +19,22 @@ ModelImporter:
     4300000: Gun
     4300002: Body
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Body
+    second: {fileID: 2100000, guid: 78549b964318da842812424b3ed94fa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Down
+    second: {fileID: 2100000, guid: 05735a9bc6322b24cb8db9f3be7bceae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gun
+    second: {fileID: 2100000, guid: 7cd414c94fa46074e82d6516048af13a, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

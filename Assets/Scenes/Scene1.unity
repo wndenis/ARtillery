@@ -1085,7 +1085,7 @@ MonoBehaviour:
   debugging: 0
   m_LightToEffect: {fileID: 1172038152}
   intesityModifier: 10
-  temperatureModifier: 3000
+  temperatureModifier: 11700
 --- !u!65 &635665199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1163,7 +1163,7 @@ Light:
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_UseColorTemperature: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1172038153
