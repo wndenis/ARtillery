@@ -5,6 +5,7 @@
     <e p="C:\Users\Denis Pozdnyakov\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_ARtillery.-173006616.00" t="ExcludeRecursive" />
     <e p="D:\Projects\ARtillery" t="IncludeRecursive">
       <e p="ARtillery.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="CameraFocus.cs" t="Include" />
@@ -24,6 +25,36 @@
           </e>
         </e>
         <e p="Restart.cs" t="Include" />
+        <e p="Standard Assets" t="Include">
+          <e p="ParticleSystems" t="Include">
+            <e p="ExplosionPhysicsForce.cs" t="Include" />
+            <e p="ParticleSystemMultiplier.cs" t="Include" />
+            <e p="ParticleSystemsGuidelines.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="AfterburnerPhysicsForce.cs" t="Include" />
+              <e p="ExplosionFireAndDebris.cs" t="Include" />
+              <e p="ExtinguishableParticleSystem.cs" t="Include" />
+              <e p="FireLight.cs" t="Include" />
+              <e p="Hose.cs" t="Include" />
+              <e p="SmokeParticles.cs" t="Include" />
+              <e p="WaterHoseParticles.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Vehicles" t="Include">
+            <e p="Aircraft" t="Include">
+              <e p="AircraftGuidelines.txt" t="Include" />
+              <e p="Scripts" t="Include">
+                <e p="AeroplaneAiControl.cs" t="Include" />
+                <e p="AeroplaneAudio.cs" t="Include" />
+                <e p="AeroplaneController.cs" t="Include" />
+                <e p="AeroplaneControlSurfaceAnimator.cs" t="Include" />
+                <e p="AeroplanePropellerAnimator.cs" t="Include" />
+                <e p="JetParticleEffect.cs" t="Include" />
+                <e p="LandingGear.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="StreamingAssets" t="Include">
           <e p="Vuforia" t="Include">
             <e p="ARtillery.xml" t="Include" />
