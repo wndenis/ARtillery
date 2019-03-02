@@ -1,12 +1,14 @@
 ﻿﻿using UnityEngine;
 using System.Collections;
-using Vuforia;
+ using System.Linq;
+ using Vuforia;
 
 public class CameraFocus : MonoBehaviour
 {
 
     private bool mVuforiaStarted = false;
     private bool mFlashEnabled = false;
+    private bool active;
 
     void Start()
     {
@@ -20,6 +22,15 @@ public class CameraFocus : MonoBehaviour
     {
         mVuforiaStarted = true;
         SetAutofocus();
+        active = true;
+    }
+
+    private void Update()
+    {
+        if (Input.touches.Any(touch => touch.phase == TouchPhase.Began))
+        {
+            SetAutofocus();
+        }
     }
 
     void OnApplicationPause(bool pause)
@@ -39,15 +50,6 @@ public class CameraFocus : MonoBehaviour
 
     private void SetAutofocus()
     {
-        if (CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO))
-        {
-            Debug.Log("Autofocus set");
-        }
-        else
-        {
-            CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_NORMAL);
-            // never actually seen a device that doesn't support this, but just in case
-            Debug.Log("this device doesn't support auto focus");
-        }
+        CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_TRIGGERAUTO);
     }
 }

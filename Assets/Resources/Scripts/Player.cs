@@ -37,9 +37,6 @@ public class Player : MonoBehaviour
         var screenPoint = Vector2.zero;
         var invalidTouch = true;
         
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
-        
         #if PLATFORM_ANDROID
         foreach (var touch in Input.touches) {
             if (touch.phase == TouchPhase.Began)
