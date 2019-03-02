@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2159515054358475121}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.015, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 2159515054358310229}
@@ -268,7 +268,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.01
-  m_BaseOffset: 0
+  m_BaseOffset: 0.015
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!54 &4857661081133962949
@@ -299,7 +299,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.015
-  m_Center: {x: 0, y: 0.006, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &8686279633555354267
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ CapsuleCollider:
   m_Radius: 0.006
   m_Height: 0.08
   m_Direction: 2
-  m_Center: {x: 0, y: 0.015, z: 0.0025}
+  m_Center: {x: 0, y: 0, z: 0.0025}
 --- !u!1 &4857661081324991672
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 2527795521204575592, guid: ab3e1627d7220584592ad73d234b2d98,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.037499998
+      value: 0.0225
       objectReference: {fileID: 0}
     - target: {fileID: 2527795521204575592, guid: ab3e1627d7220584592ad73d234b2d98,
         type: 3}

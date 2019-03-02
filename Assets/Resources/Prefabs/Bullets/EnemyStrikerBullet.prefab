@@ -4667,9 +4667,9 @@ MeshRenderer:
   m_GameObject: {fileID: 6338530990777535849}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_MotionVectors: 1
+  m_MotionVectors: 2
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 1
@@ -9404,5 +9404,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 7163590268714048146, guid: 0904b70db61209746bb09c9970a4eb6e,
     type: 3}
+  explosionRange: 0.04
   speed: 0
   direction: {x: 0, y: 0, z: 0}
