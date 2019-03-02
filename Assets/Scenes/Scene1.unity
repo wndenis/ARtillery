@@ -555,8 +555,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1277845921031870480, guid: ec27715832624df4d90589a7cb1e8997, type: 3}
   gameroot: {fileID: 2119082497}
-  maxHp: 50000
-  hp: 50000
+  maxHp: 50
+  hp: 50
   overlayImage: {fileID: 390203300}
   hitTexture: {fileID: 2800000, guid: d5719fef09b558a4c8579617fedf4432, type: 3}
   hpText: {fileID: 1303502443}
