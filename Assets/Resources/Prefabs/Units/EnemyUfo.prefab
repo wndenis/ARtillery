@@ -4858,10 +4858,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7740855173575134802}
+  - component: {fileID: 7740855173575134804}
   - component: {fileID: 7740855173575134801}
   - component: {fileID: 7740855173575134800}
   - component: {fileID: 7740855173575134803}
-  - component: {fileID: 7740855173575134804}
   m_Layer: 0
   m_Name: EnemyUfo
   m_TagString: Enemy
@@ -4884,6 +4884,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7740855173575134804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7740855173575134805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3902e14a7191dac4b8f5bb673a7bf4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 30
+  maxHp: 0
+  gun: {fileID: 0}
+  gunTip: {fileID: 7740855173145668650}
+  gunParticles: {fileID: 4428762045719456428, guid: de952462f8286f144927ee9288b4720f,
+    type: 3}
+  attackInterval: 3
+  bullet: {fileID: 5720113775592095176, guid: 584abf1f5a1747144afe2d97e784a55f, type: 3}
+  bulletSpeed: 0.175
+  deathParticles: {fileID: 959466345761811644, guid: 93048e52cb6720f41ae0fe7b554afe49,
+    type: 3}
+  player: {fileID: 0}
+  chargeParticles: {fileID: 7019007902636214316, guid: df0fcb9659001344fb2db3aa77168ff7,
+    type: 3}
+  chargeDuration: 3
+  minion: {fileID: 4857661081133962811, guid: 55adefaae474a634c88241f7c5c49dcb, type: 3}
+  minionCount: 3
 --- !u!195 &7740855173575134801
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4934,36 +4963,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.025
-  m_Center: {x: 0, y: 0.025, z: 0}
---- !u!114 &7740855173575134804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7740855173575134805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3902e14a7191dac4b8f5bb673a7bf4c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 30
-  maxHp: 0
-  gun: {fileID: 0}
-  gunTip: {fileID: 7740855173145668650}
-  gunParticles: {fileID: 4428762045719456428, guid: de952462f8286f144927ee9288b4720f,
-    type: 3}
-  attackInterval: 3
-  bullet: {fileID: 5720113775592095176, guid: 584abf1f5a1747144afe2d97e784a55f, type: 3}
-  bulletSpeed: 0.175
-  deathParticles: {fileID: 959466345761811644, guid: 93048e52cb6720f41ae0fe7b554afe49,
-    type: 3}
-  player: {fileID: 0}
-  chargeParticles: {fileID: 7019007902636214316, guid: df0fcb9659001344fb2db3aa77168ff7,
-    type: 3}
-  chargeDuration: 3
-  minion: {fileID: 4857661081133962811, guid: 55adefaae474a634c88241f7c5c49dcb, type: 3}
-  minionCount: 3
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!1001 &2883688872267571646
 PrefabInstance:
   m_ObjectHideFlags: 0

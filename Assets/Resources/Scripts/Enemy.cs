@@ -71,11 +71,11 @@ public class Enemy : MonoBehaviour
             {
                 for (var t = 0f; t < 0.5; t += Time.deltaTime)
                 {
-                    var rot = Quaternion.LookRotation(player.position - transform.position);
+                    var rot = Quaternion.LookRotation(player.position - gun.position);
                     gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.5f);
                     yield return null;
                 }
-                gun.rotation = Quaternion.LookRotation(player.position - transform.position);
+                gun.rotation = Quaternion.LookRotation(player.position - gun.position);
                 
                 var obj = Instantiate(gunParticles, transform.parent);
                 obj.transform.position = gunTip.position;
