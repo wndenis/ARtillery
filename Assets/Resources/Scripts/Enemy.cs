@@ -31,11 +31,6 @@ public class Enemy : MonoBehaviour
         StartCoroutine(Brain());
     }
 
-    private void Update()
-    {
-        
-    }
-
     public void Damage(float amount = 1f)
     {
         if (hp > 0)
@@ -51,8 +46,9 @@ public class Enemy : MonoBehaviour
         PrepareToDie();
         player.GetComponent<Player>().score += scoreCost;
         Instantiate(deathParticles, transform.parent).transform.position = transform.position;
-        Destroy(gameObject, 0.1f);
+        Destroy(gameObject, 0.15f);
     }
+
 
     protected virtual void PrepareToDie()
     {
