@@ -8,9 +8,8 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CameraFocus.cs" t="Include" />
-        <e p="HpBar.cs" t="Include" />
-        <e p="LightMatching.cs" t="Include" />
+        <e p="LightFallof.cs" t="Include" />
+        <e p="LoadSceneDelayed.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Materials" t="Include">
             <e p="LightReceive.shader" t="Include" />
@@ -19,16 +18,21 @@
           <e p="Scripts" t="Include">
             <e p="Bullet.cs" t="Include" />
             <e p="BulletUFO.cs" t="Include" />
+            <e p="CameraFocus.cs" t="Include" />
             <e p="Enemy.cs" t="Include" />
             <e p="EnemySpawner.cs" t="Include" />
             <e p="EnemyUFO.cs" t="Include" />
+            <e p="HpBar.cs" t="Include" />
+            <e p="LightMatching.cs" t="Include" />
             <e p="Player.cs" t="Include" />
+            <e p="Restart.cs" t="Include" />
+            <e p="StopAnimationAtEnd.cs" t="Include" />
+            <e p="Striker.cs" t="Include" />
           </e>
         </e>
-        <e p="Restart.cs" t="Include" />
+        <e p="ScoreDisplayer.cs" t="Include" />
         <e p="Standard Assets" t="Include">
           <e p="ParticleSystems" t="Include">
-            <e p="ParticleSystemsGuidelines.txt" t="Include" />
             <e p="Scripts" t="Include">
               <e p="ExplosionPhysicsForce.cs" t="Include" />
               <e p="ParticleSystemMultiplier.cs" t="Include" />
@@ -49,13 +53,13 @@
             </e>
           </e>
         </e>
+        <e p="StaticScore.cs" t="Include" />
         <e p="StreamingAssets" t="Include">
           <e p="Vuforia" t="Include">
             <e p="ARtillery.xml" t="Include" />
             <e p="RoomTarget.xml" t="Include" />
           </e>
         </e>
-        <e p="Striker.cs" t="Include" />
         <e p="Vuforia" t="Include">
           <e p="Databases" t="Include">
             <e p="Emulator" t="Include">

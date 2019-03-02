@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7343300030525717357}
   - component: {fileID: 1353069253746854709}
+  - component: {fileID: 2296622985447955088}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -42,8 +43,8 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.972549, g: 0.6167104, b: 0, a: 1}
-  m_Intensity: 2
-  m_Range: 0.1
+  m_Intensity: 2.6
+  m_Range: 0.12
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -69,6 +70,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2296622985447955088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370397211639256692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a47d54985a9ddf438e8aa53c732e13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1
 --- !u!1 &1659384995339597007
 GameObject:
   m_ObjectHideFlags: 0

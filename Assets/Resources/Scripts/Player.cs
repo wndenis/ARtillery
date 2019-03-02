@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
     private IEnumerator FadeIn()
     {
         yield return StartCoroutine(Fade(0, 1, 1));
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(1);
     }
     
     private IEnumerator FadeOut()
@@ -127,6 +127,7 @@ public class Player : MonoBehaviour
             hitEffectStartTime = Time.time;
             if (hp <= 0)
             {
+                StaticScore.score = score;
                 hp = 0;
                 StartCoroutine(FadeIn());
             }

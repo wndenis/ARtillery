@@ -4776,6 +4776,8 @@ GameObject:
   - component: {fileID: 2027752716489188894}
   - component: {fileID: 2018698944697483826}
   - component: {fileID: 969267889871734500}
+  - component: {fileID: 4860570925556512016}
+  - component: {fileID: 1117637446794587709}
   m_Layer: 0
   m_Name: PlayerBulletDeathParticles
   m_TagString: Untagged
@@ -9541,6 +9543,57 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!108 &4860570925556512016
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592830279070522223}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 2
+  m_Color: {r: 1, g: 0.36320752, b: 0.885843, a: 1}
+  m_Intensity: 2.5
+  m_Range: 0.12
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 0.6
+    m_Bias: 0
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &1117637446794587709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592830279070522223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a47d54985a9ddf438e8aa53c732e13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0.6
 --- !u!1 &6980835337101460295
 GameObject:
   m_ObjectHideFlags: 0
