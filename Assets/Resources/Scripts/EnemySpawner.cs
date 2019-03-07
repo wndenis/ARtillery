@@ -48,7 +48,8 @@ public class EnemySpawner : MonoBehaviour
             {
                 enemyInstance = Instantiate(enemy, transform.parent);
             }
-            
+
+            enemyInstance.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
             enemyInstance.player = player;
             enemyInstance.transform.position = pos;
             
@@ -57,8 +58,8 @@ public class EnemySpawner : MonoBehaviour
             
             if (interval < 0.8f) continue;
             if (Random.Range(0, 1) < 0.15f)
-                interval -= 0.1f;
-            interval -= 0.05f;
+                interval -= 0.005f;
+            interval -= 0.005f;
         }
     }
 }

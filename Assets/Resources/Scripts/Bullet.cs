@@ -5,15 +5,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject deathParticles;
+    public float explosionRange = 0.04f;
     [HideInInspector]
     public float speed;
     [HideInInspector]
     public Vector3 direction;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 20f);
         Init();
     }
 
@@ -32,7 +34,7 @@ public class Bullet : MonoBehaviour
     {
         if (deathParticles)
             Instantiate(deathParticles, transform.parent).transform.position = transform.position;
-        var explosion = Physics.OverlapSphere(transform.position, 0.04f);
+        var explosion = Physics.OverlapSphere(transform.position, explosionRange);
         foreach (var elem in explosion)
         {
 

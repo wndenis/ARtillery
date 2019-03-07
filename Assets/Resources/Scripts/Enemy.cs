@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     public float hp = 1;
+    public float maxHp;
     public Transform gun;
     public Transform gunTip;
     public GameObject gunParticles;
@@ -20,32 +21,34 @@ public class Enemy : MonoBehaviour
     public Transform player;
     
     protected NavMeshAgent _navMeshAgent;
+    protected int scoreCost = 1;
     
     // Start is called before the first frame update
     protected void Start()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        maxHp = hp;
         StartCoroutine(Brain());
-    }
-
-    private void Update()
-    {
-        
     }
 
     public void Damage(float amount = 1f)
     {
-        hp -= amount;
-        if (hp <= 0)
-            Die();
+        if (hp > 0)
+        {
+            hp -= amount;
+            if (hp <= 0)
+                Die();
+        }
     }
 
     protected void Die()
     {
         PrepareToDie();
+        player.GetComponent<Player>().score += scoreCost;
         Instantiate(deathParticles, transform.parent).transform.position = transform.position;
-        Destroy(gameObject, 0.1f);
+        Destroy(gameObject, 0.15f);
     }
+
 
     protected virtual void PrepareToDie()
     {
@@ -68,11 +71,11 @@ public class Enemy : MonoBehaviour
             {
                 for (var t = 0f; t < 0.5; t += Time.deltaTime)
                 {
-                    var rot = Quaternion.LookRotation(player.position - transform.position);
+                    var rot = Quaternion.LookRotation(player.position - gun.position);
                     gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.5f);
                     yield return null;
                 }
-                gun.rotation = Quaternion.LookRotation(player.position - transform.position);
+                gun.rotation = Quaternion.LookRotation(player.position - gun.position);
                 
                 var obj = Instantiate(gunParticles, transform.parent);
                 obj.transform.position = gunTip.position;
