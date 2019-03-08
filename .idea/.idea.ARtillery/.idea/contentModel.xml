@@ -26,11 +26,11 @@
             <e p="HpBar.cs" t="Include" />
             <e p="LightMatching.cs" t="Include" />
             <e p="Player.cs" t="Include" />
-            <e p="Restart.cs" t="Include" />
             <e p="SmoothCam" t="Include">
               <e p="Math3d.cs" t="Include" />
               <e p="SmoothCamera.cs" t="Include" />
             </e>
+            <e p="StartGame.cs" t="Include" />
             <e p="StopAnimationAtEnd.cs" t="Include" />
             <e p="Striker.cs" t="Include" />
           </e>

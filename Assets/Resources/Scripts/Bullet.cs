@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public GameObject deathParticles;
+    public Transform trailParticles;
     public float explosionRange = 0.04f;
     [HideInInspector]
     public float speed;
@@ -37,7 +38,6 @@ public class Bullet : MonoBehaviour
         var explosion = Physics.OverlapSphere(transform.position, explosionRange);
         foreach (var elem in explosion)
         {
-
             if (elem.CompareTag("Enemy"))
             {
                 var enemy = elem.GetComponent<Enemy>();
@@ -55,6 +55,22 @@ public class Bullet : MonoBehaviour
                     player.Damage();
             }
         }
+
+        if (trailParticles)
+        {
+            trailParticles.transform.parent = transform.parent;
+            trailParticles.localScale = Vector3.one;
+            var particleSystems = trailParticles.GetComponentsInChildren<ParticleSystem>();
+            foreach (var ps in particleSystems)
+            {
+                var main = ps.main;
+                var emission = ps.emission;
+                main.loop = false;
+                main.stopAction = ParticleSystemStopAction.Destroy;
+                emission.enabled = false;
+            }
+        }
+
         Destroy(gameObject);
     }
 }

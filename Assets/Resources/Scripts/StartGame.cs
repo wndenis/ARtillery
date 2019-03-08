@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restart : MonoBehaviour
+public class StartGame : MonoBehaviour
 {
     public Animator anim;
 
@@ -20,7 +20,7 @@ public class Restart : MonoBehaviour
     private IEnumerator Load()
     {
         yield return new WaitForSecondsRealtime(0.3f);
-        var asyncLoad = SceneManager.LoadSceneAsync(0);
+        var asyncLoad = SceneManager.LoadSceneAsync(1);
         asyncLoad.allowSceneActivation = false;
         while (!asyncLoad.isDone)
         {

@@ -56,10 +56,10 @@ public class EnemySpawner : MonoBehaviour
             
             yield return new WaitForSeconds(interval);
             
-            if (interval < 0.8f) continue;
+            if (interval < 1.5f) continue;
             if (Random.Range(0, 1) < 0.15f)
-                interval -= 0.005f;
-            interval -= 0.005f;
+                interval -= 0.01f;
+            interval -= 0.01f;
         }
     }
 }

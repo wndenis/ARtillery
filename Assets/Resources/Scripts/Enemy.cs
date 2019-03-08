@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         _navMeshAgent.enabled = true;
         _navMeshAgent.SetDestination(player.position);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         var lastDestinationTime = Time.time;
         while (true)
         {
@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
             var travelledTime = Time.time - lastDestinationTime;
             if (_navMeshAgent.pathStatus==NavMeshPathStatus.PathComplete && dist < 0.01 && !float.IsPositiveInfinity(dist) || travelledTime > 3 * attackInterval)
             {
-                for (var t = 0f; t < 0.5; t += Time.deltaTime)
+                for (var t = 0f; t < 0.35; t += Time.deltaTime)
                 {
                     var rot = Quaternion.LookRotation(player.position - gun.position);
                     gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.5f);
@@ -87,7 +87,7 @@ public class Enemy : MonoBehaviour
                 b.transform.position = gunTip.position;
                 
                 yield return new WaitForSeconds(0.25f);
-                for (var t = 0f; t < 0.5; t += Time.deltaTime)
+                for (var t = 0f; t < 0.35; t += Time.deltaTime)
                 {
                     var rot = Quaternion.LookRotation(transform.forward);
                     gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.5f);
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour
                 }
                 gun.rotation = Quaternion.LookRotation(transform.forward);
                 
-                _navMeshAgent.SetDestination(transform.parent.position + Random.insideUnitSphere * 0.42f);
+                _navMeshAgent.SetDestination(transform.parent.position + Random.insideUnitSphere * 0.2f);
                 lastDestinationTime = Time.time;
             }
             yield return new WaitForSeconds(attackInterval);

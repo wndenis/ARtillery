@@ -11,6 +11,7 @@ public class EnemyUFO : Enemy
     public float chargeDuration;
     public Enemy minion;
     public int minionCount = 3;
+    public int bulletsCount = 3;
 
     private void Update()
     {
@@ -40,20 +41,27 @@ public class EnemyUFO : Enemy
             var dist = _navMeshAgent.remainingDistance;
             var travelledTime = Time.time - lastDestinationTime;
             if (_navMeshAgent.pathStatus==NavMeshPathStatus.PathComplete && dist < 0.01 && !float.IsPositiveInfinity(dist) || travelledTime > 3 * attackInterval)
-            {                
+            {
                 var charge = Instantiate(chargeParticles, transform.parent);
                 charge.position = gunTip.position;
                 yield return new WaitForSeconds(chargeDuration);
+
+                for (var i = 0; i < bulletsCount; i++)
+                {
+                    var obj = Instantiate(gunParticles, transform.parent);
+                    var offset = Random.insideUnitCircle * 0.04f;
+                    var offsetVec = new Vector3(offset.x, 0, offset.y);
+                    obj.transform.position = gunTip.position + offsetVec;
+                    obj.transform.rotation = gunTip.rotation;
                 
-                var obj = Instantiate(gunParticles, transform.parent);
-                obj.transform.position = gunTip.position;
-                obj.transform.rotation = gunTip.rotation;
-                
-                var b = Instantiate(bullet, transform.parent) as BulletUFO;
-                b.speed = bulletSpeed;
-                b.target = player;
-                b.direction = player.position - gunTip.position;
-                b.transform.position = gunTip.position;
+                    var b = Instantiate(bullet, transform.parent) as BulletUFO;
+                    b.speed = bulletSpeed;
+                    b.target = player;
+                    b.direction = player.position - gunTip.position;
+                    b.transform.position = gunTip.position + offsetVec;
+                    yield return new WaitForSeconds(0.1f);
+                }
+
                 
                 _navMeshAgent.SetDestination(transform.parent.position + Random.insideUnitSphere * 0.42f);
                 lastDestinationTime = Time.time;

@@ -243,9 +243,9 @@ MonoBehaviour:
   gunTip: {fileID: 4857661081324991679}
   gunParticles: {fileID: 4428762045719456428, guid: de952462f8286f144927ee9288b4720f,
     type: 3}
-  attackInterval: 1.5
+  attackInterval: 1.25
   bullet: {fileID: 1277845921031870480, guid: b94d90176537dd44ca7885d593aa7caa, type: 3}
-  bulletSpeed: 0.3
+  bulletSpeed: 0.325
   deathParticles: {fileID: 1659384995339597007, guid: 4a537316d601a8f4284c2f591a3cd103,
     type: 3}
   player: {fileID: 0}
@@ -259,7 +259,7 @@ NavMeshAgent:
   m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.0075
-  m_Speed: 0.2
+  m_Speed: 0.25
   m_Acceleration: 0.25
   avoidancePriority: 50
   m_AngularSpeed: 480

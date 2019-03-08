@@ -107,7 +107,7 @@ public class Player : MonoBehaviour
     private IEnumerator FadeIn()
     {
         yield return StartCoroutine(Fade(0, 1, 1));
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(2);
     }
     
     private IEnumerator FadeOut()
