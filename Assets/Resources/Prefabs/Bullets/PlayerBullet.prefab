@@ -91,7 +91,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5
+  m_Radius: 1.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1277845921031870480
 MonoBehaviour:
@@ -108,7 +108,7 @@ MonoBehaviour:
   deathParticles: {fileID: 6592830279070522223, guid: eb0267ce729882740a509ae5386f60d1,
     type: 3}
   trailParticles: {fileID: 2951035473643011291}
-  explosionRange: 0.04
+  explosionRange: 0.035
   speed: 0
   direction: {x: 0, y: 0, z: 0}
 --- !u!1001 &7371407238501949729

@@ -167,7 +167,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 1
+  moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -14103,7 +14103,7 @@ MonoBehaviour:
   gunTip: {fileID: 5258758190465184095}
   gunParticles: {fileID: 4428762045719456428, guid: de952462f8286f144927ee9288b4720f,
     type: 3}
-  attackInterval: 0.45
+  attackInterval: 1
   bullet: {fileID: 4450557163065527449, guid: b4367b6f2a92e144ba254f19b197a4b7, type: 3}
   bulletSpeed: 0.35
   deathParticles: {fileID: 6806906424123117065, guid: bea0e632acc1b4941a07ba9540db157a,

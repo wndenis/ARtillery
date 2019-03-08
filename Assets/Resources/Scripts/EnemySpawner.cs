@@ -15,6 +15,9 @@ public class EnemySpawner : MonoBehaviour
     private int ufoCounter;
     private int strikerCounter;
     public Transform player;
+    public Transform spawnLine;
+    public Transform pointA;
+    public Transform pointB;
 
     // Start is called before the first frame update
     void Start()
@@ -22,44 +25,65 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine(Spawner());
     }
 
+    private void Spawn(Enemy origin)
+    {
+        var offset = Random.insideUnitCircle * 0.15f;
+        var pos = transform.position + new Vector3(offset.x, 0, offset.y);
+        Spawn(origin, pos);
+    }
+
+    private void Spawn(Enemy origin, Vector3 pos)
+    {
+        var obj = Instantiate(spawnParticles, transform.parent);
+        obj.position = pos;
+        
+        var enemyInstance = Instantiate(origin, transform.parent);
+        enemyInstance.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+        enemyInstance.player = player;
+        enemyInstance.transform.position = pos;
+    }
+
     private IEnumerator Spawner()
     {
         yield return new WaitForSeconds(5);
         while (true)
         {
-            var offset = Random.insideUnitCircle * 0.15f;
-            var pos = transform.position + new Vector3(offset.x, 0, offset.y);
-            var obj = Instantiate(spawnParticles, transform.parent);
-            obj.position = pos;
-            
             yield return new WaitForSeconds(0.05f);
-            Enemy enemyInstance;
             if (ufoCounter++ >= ufoCount)
             {
                 ufoCounter = 0;
-                enemyInstance = Instantiate(enemyUFO, transform.parent);
+                Spawn(enemyUFO);
             }
             else if (strikerCounter++ >= strikerCount)
             {
                 strikerCounter = 0;
-                enemyInstance = Instantiate(striker, transform.parent);
+                Spawn(striker);
             }
             else
             {
-                enemyInstance = Instantiate(enemy, transform.parent);
+                if (Random.Range(0f, 1f) < 0.085f)
+                {
+                    const int count = 6;
+                    spawnLine.rotation = Quaternion.Euler(0, Random.Range(0f, 180f), 0);
+                    for (var i = 0f; i < count; i++)
+                    {
+                        var pos = Vector3.Lerp(pointA.position, pointB.position, i / count);
+                        Spawn(enemy, pos);
+                        yield return new WaitForSeconds(0.125f);
+                    }
+                    yield return new WaitForSeconds(2f);
+                }
+                else
+                {
+                    Spawn(enemy);
+                }
             }
-
-            enemyInstance.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
-            enemyInstance.player = player;
-            enemyInstance.transform.position = pos;
-            
-            
             yield return new WaitForSeconds(interval);
             
             if (interval < 1.5f) continue;
-            if (Random.Range(0, 1) < 0.15f)
+            if (Random.Range(0f, 1f) < 0.15f)
                 interval -= 0.01f;
-            interval -= 0.01f;
+            interval -= 0.025f;
         }
     }
 }

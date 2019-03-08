@@ -59,7 +59,7 @@ public class EnemyUFO : Enemy
                     b.target = player;
                     b.direction = player.position - gunTip.position;
                     b.transform.position = gunTip.position + offsetVec;
-                    yield return new WaitForSeconds(0.1f);
+                    yield return new WaitForSeconds(0.5f);
                 }
 
                 

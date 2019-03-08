@@ -155,7 +155,7 @@ PlayerSettings:
     Android: com.wndenis.ARtillery
     Standalone: com.wndenis.ARtillery
   buildNumber: {}
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

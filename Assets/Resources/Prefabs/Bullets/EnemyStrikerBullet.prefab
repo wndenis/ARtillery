@@ -125,7 +125,7 @@ MonoBehaviour:
   deathParticles: {fileID: 7163590268714048146, guid: 0904b70db61209746bb09c9970a4eb6e,
     type: 3}
   trailParticles: {fileID: 6815309291555731615}
-  explosionRange: 0.04
+  explosionRange: 0.02
   speed: 0
   direction: {x: 0, y: 0, z: 0}
 --- !u!1001 &1780695941103845991
