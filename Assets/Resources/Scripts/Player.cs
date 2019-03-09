@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        StaticScore.Score = 0;
         StartCoroutine(FadeOut());
         if (hp < 1)
             hp = 1;
@@ -116,15 +117,16 @@ public class Player : MonoBehaviour
         yield return StartCoroutine(Fade(1, 0, 1));
     }
 
-    public void Damage(float amount = 1f)
+    public void Damage(float amount = 1f, bool effects = true)
     {
         if (hp > 0)
         {
             hp -= amount;
-            hitEffectStartTime = Time.time;
+            if (effects)
+                hitEffectStartTime = Time.time;
             if (hp <= 0)
             {
-                StaticScore.score = score;
+                StaticScore.Score = score;
                 hp = 0;
                 StartCoroutine(FadeIn());
             }

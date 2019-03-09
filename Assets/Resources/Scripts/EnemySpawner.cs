@@ -27,7 +27,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Spawn(Enemy origin)
     {
-        var offset = Random.insideUnitCircle * 0.15f;
+        var offset = Random.insideUnitCircle * 0.1125f;
         var pos = transform.position + new Vector3(offset.x, 0, offset.y);
         Spawn(origin, pos);
     }
@@ -58,7 +58,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 strikerCounter = 0;
                 Spawn(striker);
-            }
+            } 
             else
             {
                 if (Random.Range(0f, 1f) < 0.085f)

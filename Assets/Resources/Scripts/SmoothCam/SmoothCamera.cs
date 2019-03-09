@@ -49,12 +49,8 @@ public class SmoothCamera : MonoBehaviour {
 		positions = new Queue<Vector3>(smoothingFrames);
 		qcarBehavior = GetComponent<VuforiaBehaviour>();
 
-		VuforiaARController vuforia = VuforiaARController.Instance;
-//		qcarBehavior.RegisterVuforiaStartedCallback(OnInitialized);
-//		qcarBehavior.RegisterTrackablesUpdatedCallback(OnTrackablesUpdated);
-
-		vuforia.RegisterVuforiaStartedCallback(OnInitialized);
-		vuforia.RegisterTrackablesUpdatedCallback (OnTrackablesUpdated);
+		VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnInitialized);
+		VuforiaARController.Instance.RegisterTrackablesUpdatedCallback (OnTrackablesUpdated);
 	}
 
 	// Update is called once per frame
@@ -62,5 +58,10 @@ public class SmoothCamera : MonoBehaviour {
 		transform.rotation = smoothedRotation;
 		transform.position = smoothedPosition;
 	}
-
+	
+	private void OnDestroy()
+	{
+		VuforiaARController.Instance.UnregisterVuforiaStartedCallback(OnInitialized);
+		VuforiaARController.Instance.UnregisterTrackablesUpdatedCallback(OnTrackablesUpdated);
+	}
 }

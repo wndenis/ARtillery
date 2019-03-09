@@ -39,24 +39,6 @@ public class Striker : Enemy
         }
     }
 
-    private IEnumerator VerticalMovement()
-    {
-        var minOffset = _navMeshAgent.baseOffset;
-        while (true)
-        {
-            yield return new WaitForSeconds(Random.Range(1f, 4f));
-
-            var duration = Random.Range(1.2f, 3f);
-            var oldOffset = _navMeshAgent.baseOffset;
-            var newOffset = Random.Range(minOffset, minOffset * 5.5f);
-            for (var t = 0f; t < duration; t += Time.deltaTime)
-            {
-                _navMeshAgent.baseOffset = Mathf.Lerp(oldOffset, newOffset, t / duration);
-                yield return null;
-            }
-        }
-    }
-
     private IEnumerator Movement()
     {
         while (true)
@@ -72,7 +54,6 @@ public class Striker : Enemy
         _navMeshAgent.enabled = true;
         StartCoroutine(Movement());
         StartCoroutine(LogicCycle());
-        StartCoroutine(VerticalMovement());
         yield return new WaitForSeconds(0.5f);
         while (true)
         {
