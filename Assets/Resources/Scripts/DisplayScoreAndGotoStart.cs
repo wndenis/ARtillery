@@ -12,7 +12,7 @@ public class DisplayScoreAndGotoStart : MonoBehaviour
     public float delay = 5.4f;
     public int sceneNumber;
     // Start is called before the first frame update
-    void Start()
+    private IEnumerator Start()
     {
         var highScore = StaticScore.Load();
         scoreText.text = $"{StaticScore.Score}";
@@ -20,11 +20,6 @@ public class DisplayScoreAndGotoStart : MonoBehaviour
         newRecordText.SetActive(StaticScore.Score > highScore);
 
         StaticScore.Save();
-        StartCoroutine(LoadScene());
-    }
-
-    private IEnumerator LoadScene()
-    {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadSceneAsync(sceneNumber);
     }

@@ -9,8 +9,6 @@ public class EnemyUFO : Enemy
     [Space]
     public Transform chargeParticles;
     public float chargeDuration;
-    public Enemy minion;
-    public int minionCount = 3;
     public int bulletsCount = 3;
 
     private void Update()
@@ -20,13 +18,8 @@ public class EnemyUFO : Enemy
 
     protected override void PrepareToDie()
     {
+    
         scoreCost = 10;
-        for (var i = 0; i < minionCount; i++)
-        {
-            var enemyInstance = Instantiate(minion, transform.parent);
-            enemyInstance.player = player;
-            enemyInstance.transform.position = transform.position + Random.insideUnitSphere * 0.09f;
-        }
     }
 
     protected override IEnumerator Brain()

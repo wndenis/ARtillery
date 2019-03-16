@@ -29,7 +29,7 @@ public class CameraFocus : MonoBehaviour
 
     private void Update()
     {
-        if (Input.touches.Any(touch => touch.phase == TouchPhase.Began) || Input.GetKeyDown(0))
+        if (Input.touches.Any(touch => touch.phase == TouchPhase.Began) || Input.GetMouseButtonDown(0))
         {
             SetAutofocus();
         }

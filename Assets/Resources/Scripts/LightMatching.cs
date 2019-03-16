@@ -21,7 +21,9 @@ using Image = Vuforia.Image;
  
 */
 public class LightMatching : MonoBehaviour
-{   private bool mAccessCameraImage = true;
+{
+    public int step = 4;
+    private bool mAccessCameraImage = true;
     // camera image pixel 
     private Image.PIXEL_FORMAT mPixelFormat = Image.PIXEL_FORMAT.UNKNOWN_FORMAT;// or RGBA8888, RGB888, RGB565, YUV, GRAYSCALE
     // Boolean flag telling whether the pixel format has been registered
@@ -79,6 +81,7 @@ public class LightMatching : MonoBehaviour
         //Here's the getting camera pixel part of the code. not sure how it works but it works
         if (!mFormatRegistered) return;
         if (!mAccessCameraImage) return;
+        
         Vuforia.Image image = CameraDevice.Instance.GetCameraImage(mPixelFormat);
         if (image == null) return;
         string imageInfo = mPixelFormat + " image: \n";
@@ -90,7 +93,7 @@ public class LightMatching : MonoBehaviour
         if (pixels != null && pixels.Length > 0)
         {
             double totalLuminance = 0.0;
-            for (int p = 0; p < pixels.Length; p += 4)
+            for (int p = 0; p < pixels.Length; p += step)
                 totalLuminance += pixels[p] * 0.299 + pixels[p + 1] * 0.587 + pixels[p + 2] * 0.114;
             
             totalLuminance /= pixels.Length;

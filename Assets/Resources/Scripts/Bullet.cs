@@ -11,11 +11,15 @@ public class Bullet : MonoBehaviour
     public float speed;
     [HideInInspector]
     public Vector3 direction;
+
+    protected Rigidbody rb;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+        rb.velocity = direction.normalized * speed;
         Destroy(gameObject, 20f);
         Init();
     }
@@ -23,12 +27,6 @@ public class Bullet : MonoBehaviour
     protected virtual void Init()
     {
         
-    }
-
-    // Update is called once per frame
-    protected virtual void FixedUpdate()
-    {
-        transform.position += direction.normalized * speed * Time.deltaTime;
     }
 
     protected void OnTriggerEnter(Collider other)

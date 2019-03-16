@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
                 for (var t = 0f; t < 0.35; t += Time.deltaTime)
                 {
                     var rot = Quaternion.LookRotation(player.position - gun.position);
-                    gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.5f);
+                    gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.35f);
                     yield return null;
                 }
                 gun.rotation = Quaternion.LookRotation(player.position - gun.position);
@@ -90,7 +90,7 @@ public class Enemy : MonoBehaviour
                 for (var t = 0f; t < 0.35; t += Time.deltaTime)
                 {
                     var rot = Quaternion.LookRotation(transform.forward);
-                    gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.5f);
+                    gun.rotation = Quaternion.Lerp(gun.rotation, rot, t / 0.35f);
                     yield return null;
                 }
                 gun.rotation = Quaternion.LookRotation(transform.forward);

@@ -37,8 +37,7 @@ public class Player : MonoBehaviour
         scoreText.text = $"{score}";
         var screenPoint = Vector2.zero;
         var invalidTouch = true;
-        
-        #if PLATFORM_ANDROID
+
         foreach (var touch in Input.touches) {
             if (touch.phase == TouchPhase.Began)
             {
@@ -52,13 +51,7 @@ public class Player : MonoBehaviour
             invalidTouch = false;
             screenPoint = Input.mousePosition;
         }
-        #else
-        if (Input.GetMouseButtonDown(0))
-        {
-            invalidTouch = false;
-            screenPoint = Input.mousePosition;
-        }
-        #endif
+        
         if (invalidTouch)
             return;
         if (hp <= 0)

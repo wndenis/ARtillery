@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.PlayerLoop;
@@ -18,10 +18,12 @@ public class BulletUFO : Bullet
     {
         direction = Random.insideUnitSphere;
         direction.y = Mathf.Abs(direction.y) + 0.01f;
+        rb.velocity = direction;
         yield return new WaitForSeconds(delay + Random.Range(0, delay) * 0.25f);
         while (true)
         {
             direction = target.position + target.forward * 0.04f - transform.position;
+            rb.velocity = direction * speed;
             yield return new WaitForSeconds(0.25f);
         }
     }
