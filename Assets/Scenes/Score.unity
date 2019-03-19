@@ -510,7 +510,7 @@ MonoBehaviour:
   scoreText: {fileID: 1104378475}
   oldRecordText: {fileID: 583707063}
   newRecordText: {fileID: 1110900480}
-  delay: 5.45
+  delay: 3.45
   sceneNumber: 0
 --- !u!4 &1581758674
 Transform:

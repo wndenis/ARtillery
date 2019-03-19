@@ -8,7 +8,6 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="PauseOnTargetLost.cs" t="Include" />
         <e p="Resources" t="Include">
           <e p="Materials" t="Include">
             <e p="LightReceive.shader" t="Include" />

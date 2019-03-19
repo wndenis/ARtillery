@@ -9,6 +9,8 @@ public class StartGame : MonoBehaviour
     public Animator anim;
     public Text score;
     private bool _gameLoading;
+    private float linkCooldown = 3f;
+    private float linkPressedTime = -3f;
     private static readonly int Speed = Animator.StringToHash("speed");
 
     private void Start()
@@ -26,6 +28,15 @@ public class StartGame : MonoBehaviour
         anim.SetFloat(Speed, -1f);
         anim.speed = 1;
         StartCoroutine(Load());
+    }
+
+    public void ClickMarker()
+    {
+        if (Time.time - linkPressedTime >= linkCooldown)
+        {
+            linkPressedTime = Time.time;
+            Application.OpenURL("https://files.rtuitlab.ru/ARtillery/marker1.png");
+        }
     }
 
     private IEnumerator Load()
