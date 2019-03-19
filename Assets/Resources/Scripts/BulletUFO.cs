@@ -18,11 +18,11 @@ public class BulletUFO : Bullet
     {
         direction = Random.insideUnitSphere;
         direction.y = Mathf.Abs(direction.y) + 0.01f;
-        rb.velocity = direction;
+        rb.velocity = direction * speed;
         yield return new WaitForSeconds(delay + Random.Range(0, delay) * 0.25f);
         while (true)
         {
-            direction = target.position + target.forward * 0.04f - transform.position;
+            direction = (target.position + target.forward * -0.04f - transform.position).normalized;
             rb.velocity = direction * speed;
             yield return new WaitForSeconds(0.25f);
         }
