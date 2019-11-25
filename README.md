@@ -1,7 +1,7 @@
 # ARtillery
 Шутер в дополненной реальности для Android/iOS
 
-Google play: https://play.google.com/store/apps/details?id=com.wndenis.ARtillery \
+Google play: ожидается\
 App store: ожидается\
 Ссылка на метку: https://files.rtuitlab.ru/ARtillery/marker1.png 
 
